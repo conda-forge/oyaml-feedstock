@@ -1,5 +1,5 @@
 {% set name = "oyaml" %}
-{% set version = "0.7" %}
+{% set version = "0.9" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a0359138057aba8650f81d4456c553f145773c4a172d27c606429ca45e31f8d9
+  sha256: 03990464021274031c2905c3ee5c1345f318b30d0f247ea4368c44921e2b1d67
 
 build:
-  number: 1000
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
 
 requirements:
