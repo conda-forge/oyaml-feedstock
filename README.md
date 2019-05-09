@@ -200,4 +200,5 @@ Feedstock Maintainers
 =====================
 
 * [@bebatut](https://github.com/bebatut/)
+* [@quartox](https://github.com/quartox/)
 
