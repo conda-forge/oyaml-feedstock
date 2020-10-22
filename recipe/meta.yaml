@@ -1,17 +1,17 @@
 {% set name = "oyaml" %}
-{% set version = "0.9" %}
+{% set version = "1.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 03990464021274031c2905c3ee5c1345f318b30d0f247ea4368c44921e2b1d67
+  sha256: ed8fc096811f4763e1907dce29c35895d6d5936c4d0400fe843a91133d4744ed
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+  number: 0
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv '
 
 requirements:
   host:
@@ -30,9 +30,9 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "Ordered YAML: drop-in replacement for PyYAML which preserves dict ordering"
+  summary: 'Ordered YAML: drop-in replacement for PyYAML which preserves dict ordering'
 
 extra:
-  recipe-maintainers: 
+  recipe-maintainers:
     - bebatut
     - quartox
