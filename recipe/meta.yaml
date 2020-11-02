@@ -10,15 +10,16 @@ source:
   sha256: 03990464021274031c2905c3ee5c1345f318b30d0f247ea4368c44921e2b1d67
 
 build:
-  number: 1
+  noarch: python
+  number: 2
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
 
 requirements:
   host:
     - pip
-    - python
+    - python >=2.7
   run:
-    - python
+    - python >=2.7
     - pyyaml
 
 test:
