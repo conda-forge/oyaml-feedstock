@@ -6,23 +6,25 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: ed8fc096811f4763e1907dce29c35895d6d5936c4d0400fe843a91133d4744ed
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv '
 
 requirements:
   host:
     - pip
-    - python >=2.7
+    - python {{ python_min }}
   run:
-    - python >=2.7
+    - python >={{ python_min }}
     - pyyaml
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - oyaml
 
